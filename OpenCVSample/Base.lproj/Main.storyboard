@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenCVSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3W-Jx-3wj">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="gyo-6G-83k">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" id="OBj-KD-rgb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Grayscale" id="uHJ-Bq-T3H">
+                                        <connections>
+                                            <action selector="grayscaleImage:" destination="BYZ-38-t0r" id="9yH-ke-ng3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nq1-Gq-tRy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D3W-Jx-3wj" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="8eg-xE-92Y"/>
+                            <constraint firstItem="D3W-Jx-3wj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9p0-VX-oiI"/>
+                            <constraint firstItem="Nq1-Gq-tRy" firstAttribute="bottom" secondItem="D3W-Jx-3wj" secondAttribute="top" id="Tvl-F8-6xS"/>
+                            <constraint firstAttribute="trailing" secondItem="D3W-Jx-3wj" secondAttribute="trailing" id="Ux0-TU-cTM"/>
+                            <constraint firstItem="Nq1-Gq-tRy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WNT-BY-HDx"/>
+                            <constraint firstItem="Nq1-Gq-tRy" firstAttribute="trailing" secondItem="D3W-Jx-3wj" secondAttribute="trailing" id="XwZ-fc-b7H"/>
+                            <constraint firstItem="Nq1-Gq-tRy" firstAttribute="leading" secondItem="D3W-Jx-3wj" secondAttribute="leading" id="cuA-g8-SBw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Nq1-Gq-tRy" id="pIF-Ne-gil"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

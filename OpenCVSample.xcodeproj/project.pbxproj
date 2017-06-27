@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F86CA6E1F01A28F00A6BFE8 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F86CA6D1F01A28F00A6BFE8 /* opencv2.framework */; };
+		7F86CA7A1F01A72600A6BFE8 /* OpenCVSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F86CA791F01A72600A6BFE8 /* OpenCVSample.mm */; };
 		7FCDE9641F017A83006AAEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCDE9631F017A83006AAEDE /* AppDelegate.swift */; };
 		7FCDE9661F017A83006AAEDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCDE9651F017A83006AAEDE /* ViewController.swift */; };
 		7FCDE9691F017A83006AAEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCDE9671F017A83006AAEDE /* Main.storyboard */; };
@@ -15,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F86CA6D1F01A28F00A6BFE8 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		7F86CA791F01A72600A6BFE8 /* OpenCVSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVSample.mm; sourceTree = "<group>"; };
+		7F86CA7B1F02167B00A6BFE8 /* OpenCVSample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenCVSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		7FCDE9601F017A83006AAEDE /* OpenCVSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCDE9631F017A83006AAEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FCDE9651F017A83006AAEDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F86CA6E1F01A28F00A6BFE8 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +60,15 @@
 		7FCDE9621F017A83006AAEDE /* OpenCVSample */ = {
 			isa = PBXGroup;
 			children = (
+				7F86CA7B1F02167B00A6BFE8 /* OpenCVSample-Bridging-Header.h */,
+				7F86CA791F01A72600A6BFE8 /* OpenCVSample.mm */,
 				7FCDE9631F017A83006AAEDE /* AppDelegate.swift */,
 				7FCDE9651F017A83006AAEDE /* ViewController.swift */,
 				7FCDE9671F017A83006AAEDE /* Main.storyboard */,
 				7FCDE96A1F017A84006AAEDE /* Assets.xcassets */,
 				7FCDE96C1F017A84006AAEDE /* LaunchScreen.storyboard */,
 				7FCDE96F1F017A84006AAEDE /* Info.plist */,
+				7F86CA6D1F01A28F00A6BFE8 /* opencv2.framework */,
 			);
 			path = OpenCVSample;
 			sourceTree = "<group>";
@@ -97,6 +106,7 @@
 					7FCDE95F1F017A83006AAEDE = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 279M6DNERL;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FCDE9661F017A83006AAEDE /* ViewController.swift in Sources */,
+				7F86CA7A1F01A72600A6BFE8 /* OpenCVSample.mm in Sources */,
 				7FCDE9641F017A83006AAEDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,12 +274,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = 279M6DNERL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenCVSample",
+				);
 				INFOPLIST_FILE = OpenCVSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tobyliu-sw.OpenCVSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVSample/OpenCVSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -277,12 +297,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = 279M6DNERL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenCVSample",
+				);
 				INFOPLIST_FILE = OpenCVSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.tobyliu-sw.OpenCVSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVSample/OpenCVSample-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

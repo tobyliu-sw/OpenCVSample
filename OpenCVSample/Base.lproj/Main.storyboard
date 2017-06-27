@@ -24,14 +24,27 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3W-Jx-3wj">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="gyo-6G-83k">
+                                    <barButtonItem style="plain" systemItem="camera" id="gyo-6G-83k">
                                         <connections>
                                             <action selector="takePhoto:" destination="BYZ-38-t0r" id="OBj-KD-rgb"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Grayscale" id="uHJ-Bq-T3H">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="B3m-bK-gTM"/>
+                                    <barButtonItem title="Grayscale" style="plain" id="uHJ-Bq-T3H">
                                         <connections>
                                             <action selector="grayscaleImage:" destination="BYZ-38-t0r" id="9yH-ke-ng3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qLE-Pc-cOO"/>
+                                    <barButtonItem title="Blur" id="uXW-fl-gCH">
+                                        <connections>
+                                            <action selector="blurImage:" destination="BYZ-38-t0r" id="X4H-cR-w0d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="676-tJ-dsk"/>
+                                    <barButtonItem title="Edge" id="gfA-U8-uk0">
+                                        <connections>
+                                            <action selector="edgeImage:" destination="BYZ-38-t0r" id="M2J-ph-amU"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

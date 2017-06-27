@@ -36,7 +36,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
     }
 
-    @IBAction func grayscaleImage(_ sender: Any) {
+    @IBAction func grayscaleImage(_ sender: UIBarButtonItem) {
+        imageView.image = OpenCVWrapper.grayscaleImage(imageView.image)
+    }
+
+    @IBAction func blurImage(_ sender: UIBarButtonItem) {
+        imageView.image = OpenCVWrapper.gaussianBlurImage(imageView.image)
+    }
+
+    @IBAction func edgeImage(_ sender: UIBarButtonItem) {
+        imageView.image = OpenCVWrapper.cannyEdgeImage(imageView.image)
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

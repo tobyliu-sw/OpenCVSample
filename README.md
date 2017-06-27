@@ -1,6 +1,6 @@
 ## OpenCVSample
 
-[OpenCVSample](https://github.com/toby-liu-os/OpenCVSample) is an iOS app which contains an OpenCV wrapper file OpenCVSample.mm for integrating OpenCV APIs into iOS swift project.
+[OpenCVSample](https://github.com/tobyliu-sw/OpenCVSample) is an iOS app which contains an OpenCV wrapper file OpenCVSample.mm for integrating OpenCV APIs into iOS swift project.
 
 
 ### System environment

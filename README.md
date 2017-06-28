@@ -32,3 +32,17 @@
 ### Notes
 
 - To hide the warnings of "Documentation Issue", set the option "Documentation Comments" to "No" in "Build Settings" page.
+- To resolve the warnings of "Apple Mach-O Linker Warning Group", download the source code of OpenCV and build the iOS frameowork manually with modified build_framework.py
+```
+1. Patch build_framework.py
+cd ~/<my_working_directory>
+git clone https://github.com/opencv/opencv.git
+cp ~/<my_working_directory>/OpenCVSample/build_framework.py.patch ~/<my_working_directory>/opencv
+cd ~/<my_working_directory>/opencv
+git apply < build_framework.py.patch
+
+2. Follow the instructions of OpenCV tutorial "Installation in iOS" to build iOS framework.
+http://docs.opencv.org/3.2.0/d5/da3/tutorial_ios_install.html
+
+3. Copy the manually built opencv2.framework to ~/<my_working_directory>/OpenCVSample/OpenCVSample
+```

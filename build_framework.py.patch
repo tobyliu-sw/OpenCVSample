@@ -1,0 +1,12 @@
+diff --git a/platforms/ios/build_framework.py b/platforms/ios/build_framework.py
+index 78d9ec644..48b12a448 100644
+--- a/platforms/ios/build_framework.py
++++ b/platforms/ios/build_framework.py
+@@ -158,7 +158,7 @@ class Builder:
+         else:
+             arch = ";".join(archs)
+             buildcmd += [
+-                "IPHONEOS_DEPLOYMENT_TARGET=6.0",
++                "IPHONEOS_DEPLOYMENT_TARGET=8.0",
+                 "ARCHS=%s" % arch,
+             ]
